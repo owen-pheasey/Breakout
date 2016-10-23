@@ -52,12 +52,7 @@ function preload() {
     game.load.image('brick', 'img/brick.png')
     game.load.spritesheet('ball', 'img/wobble.png', 20, 20);
     game.load.spritesheet('button','button.png', 120, 40);
-    
-    
-    this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-//this.scale.pageAlignHorizontally = true;
-this.scale.pageAlignVertically = true;
-this.scale.setScreenSize( true );
+   
 }
 function create() {
       game.physics.startSystem(Phaser.Physics.ARCADE);
