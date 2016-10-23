@@ -169,7 +169,9 @@ function startGame(){
   playing = true;
 }
 function ballHitPaddle(){
-  ball.body.velocity.x  -1*5*(paddle.x-ball.x);
+ 
+    ball.body.velocity.x = -1*5*(paddle.x-ball.x);
+
 }
 
 </script>
