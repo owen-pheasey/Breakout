@@ -102,7 +102,15 @@ if(playing === true){
 
 
 }
-
+   if(playing === false){
+      ball.visible = false;
+      paddle.visible = false;
+      bricks.visible = false;
+       }else{
+        ball.visible = true;
+      paddle.visible = true;
+      bricks.visible = true;
+       }
 }
 function initBricks() {
     brickInfo = {
