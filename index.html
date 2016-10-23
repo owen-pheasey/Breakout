@@ -57,15 +57,7 @@ function create() {
       game.physics.startSystem(Phaser.Physics.ARCADE);
       startButton = game.add.button(game.world.width*0.5, game.world.height*0.5, 'button', startGame, this, 1, 0, 2);
 startButton.anchor.set(0.5);
-       if(playing = false){
-      ball.visible = false;
-      paddle.visible = false;
-      bricks.visible = false;
-       }else{
-        ball.visible = true;
-      paddle.visible = true;
-      bricks.visible = true;
-       }
+    
     
       ball = game.add.sprite(100, 160, 'ball');
 
@@ -99,6 +91,15 @@ bricks = game.add.group();
   scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
 
   }
+       if(playing = false){
+      ball.visible = false;
+      paddle.visible = false;
+      bricks.visible = false;
+       }else{
+        ball.visible = true;
+      paddle.visible = true;
+      bricks.visible = true;
+       }
 
 function update() {
 game.physics.arcade.collide(ball, paddle, ballHitPaddle);
