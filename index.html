@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>
-      Breakout
+      Brick Breaker
     </title>
     <style>
     * { padding: 0;
@@ -91,15 +91,7 @@ bricks = game.add.group();
   scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
 
   }
-       if(playing = false){
-      ball.visible = false;
-      paddle.visible = false;
-      bricks.visible = false;
-       }else{
-        ball.visible = true;
-      paddle.visible = true;
-      bricks.visible = true;
-       }
+       
 
 function update() {
 game.physics.arcade.collide(ball, paddle, ballHitPaddle);
