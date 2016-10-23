@@ -149,9 +149,9 @@ function ballHitBrick(ball, brick){
     brick.kill();
     score += 10;
     scoreText.setText('Points: '+score);
-    livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
+livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
 livesText.anchor.set(1,0);
-lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, ('Life lost, click to continue'), { font: '18px Arial', fill: '#0095DD' });
+lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', { font: '18px Arial', fill: '#0095DD' });
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
     if(score === brickInfo.count.row*brickInfo.count.col*10) {
