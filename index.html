@@ -45,9 +45,9 @@ var startButton;
 function preload() {
     
   game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.pageAlignHorizontally = true;
+    game.scale.pageAlignHorizontally = false;
     game.scale.pageAlignVertically = true;
-    game.stage.backgroundColor = 'black';
+    game.stage.backgroundColor = '#000000';
     game.load.image('ball',  'ball.png');
     game.load.image('paddle','paddle.png');
     game.load.image('brick', 'img/brick.png')
