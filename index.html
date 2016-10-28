@@ -43,18 +43,11 @@ var playing = false;
 var startButton;
 
 function preload() {
-    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Windows Phone|Kindle|Opera Mini/i.test(navigator.userAgent))
-    {
+    
   game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-}
-    else
-    {
-game.scale.scaleMode = Phaser.ScaleManager.Exact_fit;
-}
-   
     game.scale.pageAlignHorizontally = true;
     game.scale.pageAlignVertically = true;
-    game.stage.backgroundColor = '#eee';
+    game.stage.backgroundColor = 'black';
     game.load.image('ball',  'ball.png');
     game.load.image('paddle','paddle.png');
     game.load.image('brick', 'img/brick.png')
