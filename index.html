@@ -43,7 +43,13 @@ var playing = false;
 var startButton;
 
 function preload() {
-    game.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+  
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+}else{
+game.scale.scaleMode = Phaser.ScaleManager.Exact_fit;
+}
+   
     game.scale.pageAlignHorizontally = true;
     game.scale.pageAlignVertically = true;
     game.stage.backgroundColor = '#eee';
