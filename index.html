@@ -56,11 +56,7 @@ var startButton;
      game.over = false;
     game.message = null;
     
-  stop: function() {
-      if(score === 280){    
-    game.over = true;
-    game.message = 'GAME OVER - PRESS SPACEBAR';
-         }
+
      
   },
     
@@ -99,8 +95,10 @@ game.physics.arcade.checkCollision.down = false;
 
       ball.checkWorldBounds = true;
   ball.events.onOutOfBounds.add(function(){
-
-      alert('Game over!');
+      if(score === 280){    
+    game.over = true;
+    game.message = 'GAME OVER - PRESS SPACEBAR';
+         }
     location.reload();
 
 
