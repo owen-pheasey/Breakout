@@ -117,6 +117,7 @@ game.physics.arcade.collide(ball, paddle, ballHitPaddle);
     game.physics.arcade.collide(ball, bricks, ballHitBrick);
 if(playing === true){
   paddle.x = game.input.x || game.world.width*0.5;
+ball.x = game.input.x || game.world.width*0.5;
 
 
 }
