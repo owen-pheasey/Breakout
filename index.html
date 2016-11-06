@@ -53,6 +53,17 @@ var score = 0;
 var playing = false;
 var startButton;
 
+     game.over = false;
+    game.message = null;
+    
+  stop: function() {
+      if(score === 280){    
+    game.over = true;
+    game.message = 'GAME OVER - PRESS SPACEBAR';
+         }
+     
+  },
+    
 function preload() {
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     game.scale.pageAlignHorizontally = true;
