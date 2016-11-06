@@ -117,7 +117,7 @@ game.physics.arcade.collide(ball, paddle, ballHitPaddle);
     game.physics.arcade.collide(ball, bricks, ballHitBrick);
 if(playing === true){
   paddle.x = game.input.x || game.world.width*0.5;
-ball.x = game.input.x || game.world.width*0.5;
+
 
 
 }
@@ -163,7 +163,7 @@ lifeLostText.visible = false;
     if(score === brickInfo.count.row*brickInfo.count.col*10) {
 
 setTimeout(function() {
-  alert('You won the game, congratulations!');
+game.text("You won the game Congratulations");
 location.reload();
 },200);
      }
