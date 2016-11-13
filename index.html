@@ -171,8 +171,12 @@ location.reload();
 function startGame(){
 
   startButton.destroy();
-  ball.body.velocity.set(150, -150);
+ 
+setTimeout(function() {
+ ball.body.velocity.set(150, -150);
 
+},1000);
+   
   playing = true;
 }
 function ballHitPaddle(){
