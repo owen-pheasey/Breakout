@@ -101,9 +101,14 @@ game.physics.arcade.collide(ball, paddle, ballHitPaddle);
     game.physics.arcade.collide(ball, bricks, ballHitBrick);
 if(playing === true){
   paddle.x = game.input.x || game.world.width*0.5;
-
-
 }
+    if(onkeydown = 37)
+    {
+    paddle.x ++
+    }else if(onkeydown = 39)
+    {
+    paddle.x --
+    }
    if(playing === false){
       ball.visible = false;
       paddle.visible = false;
