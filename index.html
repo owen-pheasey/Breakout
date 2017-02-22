@@ -42,6 +42,16 @@ var score = 0;
 var playing = false;
 var startButton;
 
+    init: function(score) {
+
+    score = isNaN(score) ? 0 : score;
+    this.highestScore = Number(localStorage.getItem("score"));
+    this.highestScore = isNaN(this.highestScore) ? score : Math.max(score, Number(this.highestScore));
+    localStorage.setItem('score', this.highestScore);
+    return this.highestScore;
+
+
+   },
 function preload() {
     
   game.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
